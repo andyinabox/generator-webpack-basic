@@ -1,0 +1,17 @@
+{
+  "name": "webpack-gl-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "author": "Andy Dayton <amdayton@gmail.com> (http://andydayton.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.1",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
