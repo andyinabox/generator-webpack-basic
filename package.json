@@ -1,6 +1,6 @@
 {
   "name": "generator-webpack-basic",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A basic webpack generator using nyg",
   "main": "index.js",
   "scripts": {
