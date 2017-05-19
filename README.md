@@ -5,7 +5,7 @@ A barebones webpack project [nyg](https://github.com/Jam3/nyg) generator for qui
 
 This project includes:
 
-* Babel ES2015 preset (@babel/babel-loader, babel-preset-2015)
+* Babel ES2015 preset (babel-loader, babel-preset-2015)
 * .scss loader for stylesheets (sass-loader)
 * Auto-generated HTML file (html-webpack-plugin)
 * WebPack dev server (webpack-dev-server)

@@ -1,4 +1,5 @@
 const nyg = require('nyg');
+const exec = require('child_process').exec;
 
 const prompts = [
   {
@@ -25,4 +26,16 @@ const globs = [
   {base: 'template/', glob: '*'}
 ];
 
-nyg(prompts, globs).run();
+let generator = nyg(prompts, globs);
+
+// install using yarn if selected
+generator.on('preinstall', () => {
+  const done = generator.async();
+  if(generator.config.yarn) {
+    exec('yarn install', (err, stdout, stderr) => generator.end())
+  } else {
+    done();
+  }
+})
+
+generator.run()
