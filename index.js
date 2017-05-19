@@ -1,5 +1,5 @@
 const nyg = require('nyg');
-const exec = require('child_process').exec;
+const spawn = require('child_process').spawn;
 
 const prompts = [
   {
@@ -16,7 +16,7 @@ const prompts = [
   },
   {
     type: "confirm",
-    message: "run yarn install?",
+    message: "Use yarn for dependencies?",
     name: "yarn",
     default: true
   }
@@ -31,8 +31,13 @@ let generator = nyg(prompts, globs);
 // install using yarn if selected
 generator.on('preinstall', () => {
   const done = generator.async();
-  if(generator.config.yarn) {
-    exec('yarn install', (err, stdout, stderr) => generator.end())
+  if(generator.config.get('yarn')) {
+    // spawn child process
+    const yarn = spawn('yarn', ['install']);
+    // events
+    yarn.stdout.pipe(process.stdout);
+    yarn.stderr.pipe(process.stderr);
+    yarn.on('exit', (code) => generator.end());
   } else {
     done();
   }

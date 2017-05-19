@@ -1,10 +1,10 @@
 {
   "name": "generator-webpack-basic",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A basic webpack generator using nyg",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/"
   },
   "keywords": [
     "nyg",
@@ -12,5 +12,9 @@
     "webpack"
   ],
   "author": "Andy Dayton <amdayton@gmail.com> (http://andydayton.com/)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nyg": "^2.6.1",
+    "rimraf": "^2.6.1"
+  }
 }
