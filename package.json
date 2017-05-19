@@ -1,23 +1,16 @@
 {
-  "name": "webpack-gl-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "webpack.config.js",
+  "name": "generator-webpack-basic",
+  "version": "0.0.1",
+  "description": "A basic webpack generator using nyg",
+  "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "nyg",
+    "generator",
+    "webpack"
+  ],
   "author": "Andy Dayton <amdayton@gmail.com> (http://andydayton.com/)",
-  "license": "ISC",
-  "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-preset-es2015": "^6.24.1",
-    "css-loader": "^0.28.1",
-    "html-webpack-plugin": "^2.28.0",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.5",
-    "style-loader": "^0.17.0",
-    "webpack": "^2.5.1",
-    "webpack-dev-server": "^2.4.5"
-  }
+  "license": "ISC"
 }
